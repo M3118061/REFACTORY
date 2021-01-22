@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operator</title>
+</head>
+<body>
+  <script>
+    //operasi matematika
+    const angkasatu = 10
+    const angkadua = 35
+    const perkalian = angkasatu * angkadua
+    const pembagian = angkadua / angkasatu
+    const modulus = angkadua % angkasatu
+    console.log(angkasatu + angkadua)
+    console.log(angkadua - angkasatu)
+    console.log(perkalian)
+    console.log(pembagian)
+    console.log(modulus)
+
+    //operasi perbandingan
+    const perbandingan1 = angkasatu < angkadua
+    console.log (perbandingan1)
+    const perbandingan2 = angkasatu > angkadua
+    console.log (perbandingan2)
+    const perbandingan3 = angkasatu <= angkadua
+    console.log (perbandingan3)
+    const perbandingan4 = angkasatu >= angkadua
+    console.log (perbandingan4)
+    const perbandingan5 = angkasatu === angkadua
+    console.log (perbandingan5)
+    const perbandingan6 = angkasatu != angkadua
+    console.log (perbandingan6)
+
+    //operasi penugasan
+    let x = 1
+    let y = 2
+    console.log(x)
+    console.log(x = y + 1)
+    console.log(x = y - 1)
+    console.log(x = y / 1)
+    console.log(x = y * 1)
+    console.log(x = y % 1)
+
+    //operasi logika
+    const nilai1 = true
+    const nilai2 = false
+    const logika1 = nilai1 && nilai2
+    console.log(logika1)
+    const logika2 = nilai1 || nilai2
+    console.log(logika2)
+    const logika3 = !(nilai1 || nilai2)
+    console.log(logika3)
+
+    //operasi unary
+    const test = function(){}
+    const nama = 'Muthia'
+    const umur = 20
+    console.log(typeof test)
+    console.log(typeof nama)
+    console.log(typeof umur)
+
+    const buah = ['apel','pisang','mangga']
+    delete buah[1]
+    console.log(buah)
+
+    const mobil = {
+      nama : 'Toyota',
+      roda : 4
+    }
+    delete mobil['roda']
+    console.log(mobil)
+  </script>
+</body>
+</html>
