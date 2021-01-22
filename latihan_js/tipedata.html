@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipe Data</title>
+</head>
+<body>
+  <script>
+    //number
+    let one = 1
+    let hundred = new Number(100)
+    console.log(hundred+one)
+
+    //boolean
+    let isTrue = Boolean(true)
+    let toggleOn = true
+    let toggleOff = false
+    console.log(isTrue)
+    console.log(toggleOff)
+    console.log(toggleOff == toggleOff)
+
+    //string
+    let a = `Halo Muthia`
+    let b = 'Halo Amesthi'
+    let c = "Halo Saharani"
+    let d = new String('hai')
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    console.log(d)
+
+    //manipulasi string
+    const firstName = '  Muthia Amesthi  '
+    const lastName = 'Saharani'
+    const fullName = firstName + ' ' + lastName //atau let fullName = ${firstName} ${lastName}
+    console.log(fullName)
+    console.log(firstName.toUpperCase()) //huruf kapital
+    console.log(lastName.toLowerCase()) //huruf kecil
+    console.log(firstName.trim()) //menghapus spasi kanan kiri
+    console.log(firstName.trimStart()) //menghapus spasi depan
+    console.log(firstName.trimEnd()) //menghapus spasi belakang
+    console.log(lastName.repeat(3))
+
+    //undefined
+    let foo
+    console.log(foo)
+
+    //null
+    let fuu = null
+    console.log(fuu)
+
+    //array
+    const fruits = ['apel','pisang']
+    const kota = ['Jogja','Bandung','Jakarta']
+    const food = new Array ('bakso','soto','mie ayam')
+    const number = [1,2,3,4]
+    console.log(fruits)
+    console.log(kota)
+    console.log(food)
+    console.log(number)
+
+    //object
+    let person = {
+      name : 'Muthia',
+      umur : 20,
+      hobi : ['Memasak','Traveling'],
+    };
+    console.log(person)
+
+  </script>
+</body>
+</html>
