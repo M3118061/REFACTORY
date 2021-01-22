@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulasi Array</title>
+</head>
+<body>
+  <script>
+    //akses data array
+    const kota = ['Jogja','Bandung','Jakarta']
+    console.log(kota[0])
+    console.log(kota[1])
+    console.log(kota[2])
+
+    //mengubah data array
+    kota [1] = 'Bogor'
+    console.log(kota)
+
+    //menghapus data array
+    kota.pop() //menghapus di akhir array
+    console.log(kota)
+    kota.shift() //menghapus di awal array
+    console.log(kota)
+
+    //menambahkan array
+    kota.push('Jakarta') //menambah di akhir
+    console.log(kota)
+    kota.unshift('Jogja') //menambah di awal
+    console.log(kota)
+
+    //merubah string ke array
+    const arrayFoo = Array.from ('foo');
+    console.log(arrayFoo)
+    const arrayFuu = "Fuu".split("")
+    console.log(arrayFuu)
+
+    //mencari data dalam array
+    let a = [5,3,2,4,1]
+    console.log(a.includes(2))
+    console.log(a.includes(7))
+
+    //mengurutkan data array
+    console.log(a.sort())
+
+    //array slice
+    const nama = ['Muthia','Amesthi','Saharani']
+    const sliceNama = nama.slice(0,2)
+    console.log(sliceNama)
+
+    //array reverse
+    const reverseNama = nama.reverse()
+    console.log(reverseNama)
+  </script>
+</body>
+</html>
