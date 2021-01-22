@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulasi Object</title>
+</head>
+<body>
+  <script>
+    //akses data object
+    let person = {
+      name : 'Muthia',
+      umur : 20,
+      hobi : ['Memasak','Traveling'],
+    };
+    console.log(person.name)
+    console.log(person['umur'])
+    console.log(person.hobi[0])
+
+    //mengubah data dalam object
+    person.name = 'Yoga'
+    console.log(person.name)
+    person['hobi']['1'] = 'Jalan-jalan'
+    console.log(person.hobi)
+  </script>
+</body>
+</html>
