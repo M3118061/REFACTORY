@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perulangan dan Manipulasi Object</title>
+</head>
+<body>
+  <script>
+    //for in
+    let obj1 = { a : 1, b : 2}
+    for (const key in obj1) {
+      console.log(obj1[key])
+    }
+
+    //object assign
+    const data = {
+      satu : "dua"
+    }
+    const assignData = Object.assign({},data)
+    assignData.tiga = "empat"
+    console.log(data)
+    console.log(assignData)
+
+    //object keys
+    let person = {
+      nama : 'Muthia',
+      umur : 20,
+      height : '6 ft'
+    };
+    let personKeys = Object.keys(person);
+    console.log(personKeys)
+
+    //object entries
+    let personEntries = Object.entries(person);
+    console.log(personEntries)
+
+    //object values
+    let personValues = Object.values(person);
+    console.log(personValues)
+  </script>
+</body>
+</html>
