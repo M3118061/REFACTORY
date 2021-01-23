@@ -11,6 +11,70 @@
     if (1 > 0){
       console.log('satu lebih dari 0')
     }
+
+    //elseif
+    const nilai = 4
+    if (nilai > 4){
+      console.log("nilai lebih besar dari 4");
+    } else if (nilai === 4){
+      console.log("nilai sama dengan 4");
+    }
+
+    //else
+    const x = 3
+    if (x === 3){
+      console.log("x adalah 3");
+    } else if (x === 4){
+      console.log("x adalah 4");
+    } else {
+      console.log("x bukan 3 atau 4")
+    }
+
+    //ternary operator
+    nilai > 4 ? console.log("nilai lebih besar dari 4") : console.log("lebih kecil dari 4")
+
+    //thrutiness
+    const a = 5
+    if (a) {
+      console.log("ini benar");
+    } else {
+      console.log("ini salah")
+    }
+
+    //switch
+    let angka = 5;
+    switch (angka) {
+      case 5:
+        console.log('angka 5');
+        break;
+      case 6:
+        console.log('angka 6');
+        break;
+      default:
+        console.log('angka bukan 5 atau 6')
+        break;
+    }
+
+    //break
+    const kota = ["Jakarta","Bandung","Jogja","Bogor"];
+    for (let index = 0; index < kota.length; index++) {
+      const element = kota[index];
+      if (element === "Bandung") {
+        break
+      }
+      console.log(element)
+    }
+
+    //continue
+    const mobil = ["Sedan","Brio","Avanza","BMW"];
+    for (let index = 0; index < mobil.length; index++) {
+      const element = mobil[index];
+      if (element === "Brio") {
+        continue
+      }
+      console.log(element)
+    }
+
   </script>
 </body>
 </html>
