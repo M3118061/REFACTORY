@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logging</title>
+</head>
+<body>
+  <script>
+    
+    //console log : untuk pengecekan thd code ke dlm console
+    console.log("hello") //data string
+    console.log({hello:"world"}) //array
+    console.log(["hello","world"]) //object
+
+    //console time & console time end
+    /* untuk menentukan berapa lama sebuah operasi
+    berjalan dlm ms timer */
+    console.time("test1")
+    for(let i = 0; i < 10000; i++){
+
+    }
+    console.timeEnd("test1")
+
+    /*Console grup & grup end
+    buat inline ke dalam consle*/
+    console.log("Hello World");
+    console.group();
+    console.log("ini di dalam grup");
+    console.groupEnd();
+    console.log("ini di luar grup");
+  </script>
+</body>
+</html>
