@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Handling</title>
+</head>
+<body>
+  <script>
+    //Try : cek code apakah ada error atau tidak
+    try {
+      console.log(hello)
+    } catch (error) {
+      
+    }
+
+    //catch : menampung hasil error dari try blok
+    try {
+      console.log(hai)
+    } catch (error) {
+      console.log(error)
+    }
+
+    /*finally : selalu dijalankan
+    setelah try blok dan catch blok selesai dijalankan
+    akan selalu dijalankan apapun hasil exception dari try
+    atau catch*/
+    try {
+      console.log(hey)
+    } catch (error) {
+      console.log("code error")
+    } finally{
+      console.log("selalu dijalankan")
+    }
+
+    /*throw untuk custom error akan menghentikan proses yg 
+    sedang berjalan & akan melempar exception ke dalam catch
+    blok pertama, jk tida ada catch dlm function yg dibuat
+    program akan berhenti*/
+    try {
+      throw new Error("oopss"); //melempar error dg pesan oops
+    } catch (ex) {
+      console.log(ex.message); //expected output : oops
+    } finally {
+      console.log("finally"); //selalu dijalankan
+    }
+  </script>
+</body>
+</html>
