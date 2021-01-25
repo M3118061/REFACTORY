@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge 4</title>
+</head>
+<body>
+  <script>
+    const tahunAwal = prompt("Masukkan tahun awal");
+    const tahunAkhir = prompt("Masukkan tahun akhir");
+    const tahun = [];
+    
+    for (let index = tahunAwal; index <= tahunAkhir; index++) {
+      if (index % 4 == 0){
+        tahun.push(index);
+      }
+    }
+    console.log(tahun);
+  </script>
+</body>
+</html>
