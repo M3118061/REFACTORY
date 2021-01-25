@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge 3</title>
+</head>
+<body>
+  <script>
+    var angka = [-6, -4, 0, 1, 2, 3, 10, 12, 44, 52, 72, 98];
+    //mencari nilai max
+    var max = Math.max.apply(Math, angka);
+    console.log("Max : ", max)
+    //mencari nilai min
+    var min = Math.min.apply(Math, angka)
+    console.log("Min : ", min)
+    //mencari nilai tengah
+    console.log("Median : ", angka[5])
+    //mencari rata-rata
+    const sum = angka.reduce((a,b) => a + b, 0)
+    const average = (sum/angka.length) || 0;
+    const pembulatan = Math.ceil(average)
+    console.log("Average : ", pembulatan)
+  </script>
+</body>
+</html>
