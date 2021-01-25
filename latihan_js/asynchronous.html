@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous</title>
+</head>
+<body>
+  <script>
+    /* callback : function yg diperlukan sbg argumen dlm sebuah
+    argumen */
+    function calc(callback){
+      for (let index = 0; index < 1000; index++) {
+        
+      }
+      callback("hasil")
+    }
+    function outputCallback(value){
+      console.log(value)
+    }
+    calc(outputCallback)
+
+    /* promise : memberikan sebuah nilai di masa depn, 
+    dibagi menjadi 3 kondisi yi (pending,fulfiled,rejected)*/
+    const janji = new Promise((resolve, reject) => {
+      resolve("hello")
+      if(null){
+        reject("error")
+      }
+    })
+    console.log(janji)
+
+    /* Promise then : menghasilkan sebuah promise, menerima 2 argumen
+    callback sukses * error. Bisa melakukan method chaining.
+    digunakan u/ menerima nilai sukses sebuah promise*/
+    const Janji = new Promise((resolve, reject) => {
+      resolve("SUKSES")
+      if(null){
+        reject("error")
+      }
+    })
+    Janji.then((value) => {
+      console.log(value)
+    })
+
+    /* Promise catch : menghasilkan sebuah promise, hanya berjalan
+    ketika kondisi rejected. Untuk mengelola error. Bisa chaining method */
+    const JANJI = new Promise((resolve, reject) => {
+      //resolve("PROMISE SUKSES")
+      reject(new Error("PROMISE GAGAL"));
+    });
+    JANJI.then((value) => {
+      console.log(value)
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+    /* Promise finally : menghasilkan promise ketika fulfiled/reject */
+    const promise = new Promise((resolve, reject) => {
+      resolve("PROMISE SUKSES")
+      reject(new Error("PROMISE GAGAL"));
+    });
+    promise.then((value) => {
+      console.log(value)
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+    .finally(() => {
+      console.log("jalan")
+    });
+
+    /* Promise all : kumpulan promise dlm bentuk array */
+    const promise1 = Promise.resolve(3);
+    const promise2 = 43;
+    const promise3 = new Promise(function (resolve,reject) {
+      setTimeout(resolve,100,"foo");
+    });
+    Promise.all([promise1,promise2,promise3]).then(function (values) {
+      console.log(values)
+    })
+
+    /* Promise allsettled : dilengkapi dg status dari setiap status
+    walau terdapat reject semua promise tetap ada hasilnya */
+    const promise4 = Promise.resolve(4);
+    const promise5 = 45;
+    const promise6 = new Promise(function (resolve,reject) {
+      setTimeout(resolve,100,"fuu");
+    });
+    Promise.allSettled([promise4,promise5,promise6]).then(function (values) {
+      console.log(values)
+    })
+
+    /* Promise race : menghasilkan promise yg pertama selesai baik
+    itu error tau sukses */
+    const promise7 = new Promise(function (resolve,reject) {
+      setTimeout(resolve, 500, 'one');
+    });
+    const promise8 = new Promise(function (resolve,reject) {
+      setTimeout(resolve, 100, 'two');
+    });
+    Promise.race([promise7,promise8]).then(function(value){
+      console.log(value)
+    });
+
+    /* Promise resolve/reject : untuk debugging */
+    const p = Promise.resolve([1,2,3]);
+    p.then(function(v){
+      console.log(v[0])
+    })
+    
+    /* async await : membuat penulisan task asinkron menjadi sinkron */
+    async function hello2() {
+      return "Hello";
+    }
+    console.log(hello2())
+
+    /* Await : dapat dijalankan dlm sebuah async function */
+    const world = Promise.resolve("world")
+    async function hello3() {
+      const result = await world
+      console.log(result)
+      return "Hello";
+    }
+    console.log(hello3())
+
+    //Async Exception
+    const dunia = Promise.reject("dunia");
+    async function hallo() {
+      try {
+        const result = await dunia;
+        console.log(result)
+      } catch (error) {
+        console.log(error)
+      }
+      return "world";
+    }
+    console.log(hallo())
+    
+  </script>
+</body>
+</html>
