@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge 5</title>
+</head>
+<body>
+  <script>
+    const kata = prompt("Masukkan kata : ");
+    function palindrom(str) {
+      const len = kata.length;
+      for (let i = 0; i < len / 2; i++) {
+        if (kata[i] !== kata[len - 1 - i]) {
+          return 'Bukan palindrom';
+        }
+      }
+      return 'Palindrom';
+    }
+    const value = palindrom(kata);
+    console.log(kata, " # ---> ", value);
+  </script>
+</body>
+</html>
