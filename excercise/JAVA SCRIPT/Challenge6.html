@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge 6</title>
+</head>
+<body>
+  <script>
+    var tglLahir = prompt("Masukkan tanggal lahir (YYYYMMDD)");
+    var year = Number(tglLahir.substr(0, 4));
+    var month = Number(tglLahir.substr(4, 2)) - 1;
+    var day = Number(tglLahir.substr(6, 2));
+    var today = new Date();
+    var age = today.getFullYear() - year;
+    if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
+      age--;
+    }
+    console.log("Usia Anda : ", age, "tahun");
+  </script>
+</body>
+</html>
