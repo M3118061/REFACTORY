@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge 8</title>
+</head>
+<body>
+  <script>
+    var angka = [3, 52, 103, -6, 10, 0, 3, 1, -4, 40, 71];
+    console.log("Sebelum diurutkan : ", angka)
+    for (let i = 0; i < angka.length; i++) {
+      for (let j = i + 1; j <= angka.length - 1; j++) {
+        if (angka[i] > angka[j]) {
+          temp = angka[j]
+          angka[j] = angka[i]
+          angka[i] = temp
+        }        
+      }      
+    }
+    console.log("Setelah diurutkan : ", angka)
+  </script>
+</body>
+</html>
