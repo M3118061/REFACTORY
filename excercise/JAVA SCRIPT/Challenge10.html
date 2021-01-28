@@ -7,7 +7,15 @@
 </head>
 <body>
   <script>
-    
+    const jam = prompt("Masukkan jam")
+    const menit = prompt("Masukkan menit")
+    const detik = prompt("Masukkan detik")
+    const konversiJam = jam*60
+    console.log(jam, "Jam ", konversiJam.toFixed(), "Menit")
+    const konversiMenit = menit/60
+    console.log(menit, "Menit ", konversiMenit.toFixed(), "Jam")
+    const konversiDetik = detik/60
+    console.log(detik, "Detik ", konversiDetik.toFixed(), "Menit")
   </script>
 </body>
 </html>
