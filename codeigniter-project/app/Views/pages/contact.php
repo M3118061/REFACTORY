@@ -5,7 +5,9 @@
     <div class="col">
       <div class="">
         <h2>Contact</h2>
-        <form>
+        <?php d($error) ?>
+        <form method="POST" action="<?= base_url("/pages/contact") ?>">
+        <?= csrf_field() ?>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

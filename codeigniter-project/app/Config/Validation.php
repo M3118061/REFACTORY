@@ -40,4 +40,18 @@ class Validation
 	//--------------------------------------------------------------------
 	// Rules
 	//--------------------------------------------------------------------
+
+	public $contact = [
+		"email" => "required",
+		"subject" => "required|min_leght[5]"
+	];
+
+	public $contact_error = [
+		"email" => [
+			"required" => "Email harus diisi",
+		],
+		"subject" => [
+			"required" => "Subject harus diisi",
+		],
+	];
 }
